@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "LowMemoryObserverModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "io.toio.toiodo.memory.LowMemoryObserverModule"
+    ]
+  }
+}

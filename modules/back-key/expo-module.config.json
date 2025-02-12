@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "BackKeyControllerModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "io.toio.toiodo.backkey.BackKeyControllerModule"
+    ]
+  }
+}

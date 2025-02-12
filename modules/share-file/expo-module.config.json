@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "ShareFileObserverModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "io.toio.toiodo.sharefile.ShareFileObserverModule"
+    ]
+  }
+}
