@@ -20,7 +20,11 @@
       "permissions": [
         "android.permission.BLUETOOTH",
         "android.permission.BLUETOOTH_ADMIN",
-        "android.permission.BLUETOOTH_CONNECT"
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.ACCESS_MEDIA_LOCATION"
       ],
       "blockedPermissions": [
         "android.permission.ACCESS_FINE_LOCATION",
@@ -34,7 +38,10 @@
           "action": "SEND",
           "data": [
             {
-              "mimeType": ["application/octet-stream", "application/x-zip"]
+              "mimeType": "application/octet-stream"
+            },
+            {
+              "mimeType": "application/x-zip"
             }
           ],
           "category": "DEFAULT"
@@ -43,13 +50,17 @@
           "action": "VIEW",
           "data": [
             {
-              "mimeType": ["application/octet-stream", "application/x-zip"]
+              "mimeType": "application/octet-stream"
+            },
+            {
+              "mimeType": "application/x-zip"
             }
           ],
           "category": "DEFAULT"
         },
         {
           "action": "VIEW",
+          "autoVerify": true,
           "data": [
             {
               "scheme": "https",
@@ -61,6 +72,7 @@
         },
         {
           "action": "VIEW",
+          "autoVerify": true,
           "data": [
             {
               "scheme": "https",

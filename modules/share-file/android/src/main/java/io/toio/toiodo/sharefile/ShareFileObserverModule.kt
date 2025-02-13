@@ -29,11 +29,11 @@ class ShareFileObserverModule : Module() {
                 sendEvent(param)
             }
             manager.clearEventParams()
-//            manager.setEvent{sendEvent}
+            manager.setHandleEvent { param -> sendEvent(param) }
         }
 
         Function("stop") {
-            manager.setEvent(null)
+            manager.setHandleEvent(null)
         }
     }
 

@@ -3,15 +3,12 @@ package io.toio.toiodo.sharefile
 import org.json.JSONObject
 
 class ShareFileManager private constructor() {
-    interface Event {
-        fun send(param: JSONObject?)
-    }
+    private var event: ((JSONObject) -> Unit)? = null
 
-    private var event: Event? = null
     val eventParams: ArrayList<JSONObject> = ArrayList()
 
-    fun setEvent(event: Event?) {
-        this.event = event
+    fun setHandleEvent(handleEvent: ((JSONObject) -> Unit)?) {
+        this.event = handleEvent;
     }
 
     private fun addEventParam(param: JSONObject) {
@@ -24,7 +21,7 @@ class ShareFileManager private constructor() {
 
     fun sendEvent(param: JSONObject) {
         if (event != null) {
-            event!!.send(param)
+            event!!.invoke(param)
         } else {
             addEventParam(param)
         }
