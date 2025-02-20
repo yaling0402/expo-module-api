@@ -4,7 +4,7 @@ export default {
     slug: "my-app",
     version: "1.0.0",
     orientation: "portrait",
-    icon: "./assets/images/icon.png",
+    icon: "./assets/images/ic_launcher_s.png",
     scheme: "myapp",
     userInterfaceStyle: "automatic",
     newArchEnabled: true,
@@ -13,8 +13,8 @@ export default {
     },
     android: {
       adaptiveIcon: {
-        foregroundImage: "./assets/images/adaptive-icon.png",
-        backgroundColor: "#ffffff",
+        foregroundImage: "./assets/images/toio-playstore.png",
+        backgroundColor: "#00A3BC",
       },
       package: "com.yaling.huang.myapp",
       permissions: [
